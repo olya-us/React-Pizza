@@ -15,8 +15,8 @@ const App = () => {
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
             {
-              pizzas.map((obj) => (
-                <PizzaBlock {...obj}/>
+              pizzas.map((obj, i) => (
+                <PizzaBlock {...obj} key={obj.id}/>
               ))
             }  
           </div>
