@@ -1,8 +1,10 @@
 import {Categories, SortPopup, PizzaBlock, Skeleton} from '../components/index';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Pagination } from '../components/Pagination';
+import { SearchContext } from '../App';
 
-export const Home = ({searchValue}) => {
+export const Home = () => {
+    const {searchValue} = useContext(SearchContext);
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [categoryId, setCategoryId] = useState(0);
